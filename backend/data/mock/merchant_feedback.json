@@ -1,0 +1,212 @@
+[
+  {
+    "log_id": "94d2666f-45d1-40ca-ba8a-6257527a0480",
+    "merchant_id": "M001",
+    "signal_type": "explicit_negative",
+    "details": "User clicked Báo sai thông tin",
+    "timestamp": 1775725426.7554386
+  },
+  {
+    "log_id": "45c701fe-55fc-4086-a050-64abc5ab7242",
+    "merchant_id": "M002",
+    "signal_type": "positive",
+    "details": "User clicked Thêm vào giỏ",
+    "timestamp": 1775725746.3202543
+  },
+  {
+    "log_id": "5f3ff2d7-5500-4eeb-bc70-51bcbd7fee69",
+    "merchant_id": "M002",
+    "signal_type": "explicit_negative",
+    "details": "User clicked Báo sai thông tin",
+    "timestamp": 1775725948.2031965
+  },
+  {
+    "log_id": "7905043e-2a08-4921-8e0d-2496df0a97a3",
+    "merchant_id": "M002",
+    "signal_type": "explicit_negative",
+    "details": "User clicked Báo sai thông tin",
+    "timestamp": 1775726363.3393326
+  },
+  {
+    "log_id": "6ca95503-1da3-4a6e-becf-d8190d0d6439",
+    "merchant_id": "M001",
+    "signal_type": "explicit_negative",
+    "details": "User clicked Báo sai thông tin",
+    "timestamp": 1775726497.3657334
+  },
+  {
+    "log_id": "c221e1fc-b73c-48c4-b778-8efcde37429d",
+    "merchant_id": "M001",
+    "signal_type": "explicit_negative",
+    "details": "User clicked Báo sai thông tin",
+    "timestamp": 1775727430.103681
+  },
+  {
+    "log_id": "c221e1fc-b73c-48c4-b778-8efcde37429d",
+    "merchant_id": "M001",
+    "signal_type": "explicit_negative",
+    "details": "User clicked Báo sai thông tin",
+    "timestamp": 1775727484.620633
+  },
+  {
+    "log_id": "e15330da-9d8e-449e-85be-4857d87df925",
+    "merchant_id": "M003",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775728947.2512383
+  },
+  {
+    "log_id": "e15330da-9d8e-449e-85be-4857d87df925",
+    "merchant_id": "M003",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775728948.1368768
+  },
+  {
+    "log_id": "e15330da-9d8e-449e-85be-4857d87df925",
+    "merchant_id": "M003",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775728948.5966883
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775729025.66443
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775729072.004456
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775729072.14575
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775729072.276231
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775729072.3953164
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775729072.538051
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775729075.66375
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775729075.8176959
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775729075.946315
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775729076.084491
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775729076.2181556
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775729076.345074
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775729076.4679265
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775729076.597496
+  },
+  {
+    "log_id": "9e966470-96a9-4c7e-9cf9-ad54e0fc850b",
+    "merchant_id": "M003",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775729076.741776
+  },
+  {
+    "log_id": "89fbc438-b3b1-4bf2-a628-dd1683b9b6dc",
+    "merchant_id": "M003",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775729196.9014235
+  },
+  {
+    "log_id": "58d531a6-690a-4b04-ac78-1fa7e05b11f0",
+    "merchant_id": "M002",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775730292.9260204
+  },
+  {
+    "log_id": "1eb57148-fa5e-49cc-bf8b-15d728c4ff54",
+    "merchant_id": "M002",
+    "signal_type": "positive",
+    "details": "User clicked 👍",
+    "timestamp": 1775731946.2614057
+  },
+  {
+    "log_id": "869b1e90-64db-4a01-9fed-77e627764dfc",
+    "merchant_id": "M002",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775732198.5814211
+  },
+  {
+    "log_id": "644454fc-4c1e-4aeb-9478-6a5bec9c03ea",
+    "merchant_id": "M002",
+    "signal_type": "explicit_negative",
+    "details": "User clicked 👎",
+    "timestamp": 1775749576.901486
+  }
+]

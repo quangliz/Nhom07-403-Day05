@@ -1,6 +1,0 @@
-dotenv
-langchain
-langchain-core
-langchain-openai
-langgraph
-fastapi
