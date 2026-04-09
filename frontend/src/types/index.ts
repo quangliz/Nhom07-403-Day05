@@ -36,6 +36,27 @@ export interface MerchantItem {
   status: MerchantItemStatus;
 }
 
+// Merchant order (used by merchant dashboard order components)
+export interface MerchantOrder {
+  id: string;
+  code: string;
+  status: "new" | "confirmed" | "history_done" | "history_cancelled";
+  time: string;
+  date: string;
+  total: number;
+  itemCount: number;
+  customer: { name: string };
+  driverAssigned: boolean;
+}
+
+// Wallet transaction (used by merchant wallet components)
+export interface WalletTransaction {
+  id: string;
+  status: "done" | "cancelled";
+  date: string;
+  amount: number;
+}
+
 // POST /chat request/response
 export interface ChatRequest {
   merchant_id: string;
