@@ -1,64 +1,79 @@
-{
-  "store_id": "store_001",
-  "store_name": "XanhSM Food - Chi nhánh 1",
-  "phone": "028-1234-5678",
-  "address": "123 Nguyễn Trãi, Q.1, TP.HCM",
-  "items": [
-    {
-      "id": "item_001",
-      "store_id": "store_001",
-      "name": "Cơm gà nướng",
-      "price": 75000,
-      "category": "cơm",
-      "description": "Cơm trắng dẻo, gà nướng mật ong thơm lừng, kèm rau sống",
-      "allergens": ["gluten"],
-      "ingredients": ["cơm", "gà", "mật ong", "hành", "tỏi", "rau sống"],
-      "is_available": true,
-      "image_url": "https://example.com/images/com-ga-nuong.jpg",
-      "spicy_level": 0,
-      "updated_at": "2026-04-01T07:00:00Z"
-    },
-    {
-      "id": "item_002",
-      "store_id": "store_001",
-      "name": "Cơm bò lúc lắc",
-      "price": 95000,
-      "category": "cơm",
-      "description": "Cơm trắng, bò xào sốt bò lúc lắc đặc biệt, kèm rau cải",
-      "allergens": ["bò", "gluten", "soy"],
-      "ingredients": ["cơm", "thịt bò", "sốt bò", "rau cải", "hành tây"],
-      "is_available": true,
-      "image_url": "https://example.com/images/com-bo-luc-lac.jpg",
-      "spicy_level": 1,
-      "updated_at": "2026-04-01T07:00:00Z"
-    },
-    {
-      "id": "item_003",
-      "store_id": "store_001",
-      "name": "Bún bò Huế",
-      "price": 65000,
-      "category": "bún",
-      "description": "Bún bò Huế chuẩn vị miền Trung, nước dùng đậm đà",
-      "allergens": null,
-      "ingredients": null,
-      "is_available": true,
-      "image_url": "https://example.com/images/bun-bo-hue.jpg",
-      "spicy_level": 3,
-      "updated_at": "2026-04-01T07:00:00Z"
-    },
-    {
-      "id": "item_004",
-      "store_id": "store_001",
-      "name": "Mì xào hải sản",
-      "price": 85000,
-      "category": "mì",
-      "description": "Mì xào giòn với tôm, mực, rau củ tươi",
-      "allergens": ["tôm", "mực", "hải sản", "gluten"],
-      "ingredients": ["mì", "tôm", "mực", "cà rốt", "bông cải", "dầu hào"],
-      "is_available": false,
-      "image_url": "https://example.com/images/mi-xao-hai-san.jpg",
-      "spicy_level": 0,
-      "updated_at": "2026-04-01T07:00:00Z"
-    }
-  ]
-}
+[
+  {
+    "id": "M001",
+    "name": "Phở Gia Truyền Thìn",
+    "description": "Lưu ý từ quán: Quán sử dụng nước hầm xương bò chung cho các món phở. Khách có thể yêu cầu nước béo, nước trong, hoặc không cho hành/mùi. Quẩy có thể hết sớm vào buổi tối.",
+    "faqs": [
+        {
+            "question": "Quán đóng gói mang về như thế nào? Nước và phở có để riêng không?",
+            "answer": "Để đảm bảo chất lượng, quán luôn đóng gói bánh phở và thịt ở một hộp riêng, nước dùng đựng trong túi zip giữ nhiệt riêng. Khi ăn bạn mới cần đổ nước vào."
+        },
+        {
+            "question": "Tôi có thể xin thêm chanh, ớt và tương tỏi không?",
+            "answer": "Có, mỗi phần phở quán đều gửi kèm 1 túi gia vị nhỏ gồm chanh, ớt tươi và tương ớt mường khương miễn phí."
+        },
+        {
+            "question": "Quán mở cửa đến mấy giờ?",
+            "answer": "Quán nhận đơn XanhSM Food từ 6:00 sáng đến 23:00 tối hàng ngày."
+        }
+    ],
+    "items": [
+      {"id": "item_101", "name": "Phở bò tái lăn", "price": 70000, "description": "Thịt bò xào lăn với tỏi phi thơm, nước dùng đậm đà.", "ingredients": ["bánh phở", "thịt bò", "tỏi", "hành lá", "nước hầm xương"], "is_avaiable": true},
+      {"id": "item_102", "name": "Phở gà ta xé phay", "price": 55000, "description": "Gà ta thả vườn xé phay, nước trong, thanh ngọt.", "ingredients": ["bánh phở", "thịt gà ta", "lá chanh", "hành tây", "nước hầm xương gà"], "is_avaiable": true},
+      {"id": "item_103", "name": "Quẩy giòn", "price": 10000, "description": null, "ingredients": ["bột mì", "dầu ăn"], "is_avaiable": false},
+      {"id": "item_104", "name": "Phở sốt vang", "price": 65000, "description": "Thịt bò hầm sốt vang đậm đà, mềm tan.", "ingredients": ["bánh phở", "thịt bò", "rượu vang", "quế", "hồi"], "is_avaiable": true},
+      {"id": "item_105", "name": "Phở bò chín", "price": 60000, "description": "Thịt bò chín thái lát mỏng, nước dùng thanh.", "ingredients": ["bánh phở", "thịt bò chín", "hành lá", "nước hầm xương"], "is_avaiable": true},
+      {"id": "item_106", "name": "Phở bò tái chín", "price": 65000, "description": "Kết hợp giữa thịt bò tái và bò chín.", "ingredients": ["bánh phở", "thịt bò", "thịt bò chín", "hành lá"], "is_avaiable": true},
+      {"id": "item_107", "name": "Trứng chần", "price": 10000, "description": "Trứng gà ta chần lòng đào.", "ingredients": ["trứng gà"], "is_avaiable": true},
+      {"id": "item_108", "name": "Phở đặc biệt", "price": 90000, "description": "Full topping: tái, chín, gân, bò viên.", "ingredients": ["bánh phở", "thịt bò", "gân bò", "bò viên", "hành lá"], "is_avaiable": true},
+      {"id": "item_109", "name": "Bò viên", "price": 20000, "description": "Bát bò viên riêng thơm ngon.", "ingredients": ["bò viên", "nước hầm xương"], "is_avaiable": true},
+      {"id": "item_110", "name": "Sữa đậu nành", "price": 15000, "description": "Sữa đậu nành nguyên chất, ít đường.", "ingredients": ["đậu nành", "đường"], "is_avaiable": true}
+    ]
+  },
+  {
+    "id": "M002",
+    "name": "Cơm Tấm Bụi Sài Gòn",
+    "description": "Lưu ý từ quán: Khách có thể yêu cầu thêm mỡ hành, tóp mỡ hoặc xin thêm nước mắm miễn phí. Vui lòng ghi chú nếu không ăn đồ chua hoặc dị ứng với các loại hạt (quán có dùng dầu đậu phộng để chiên).",
+    "faqs": [
+        {
+            "question": "Quán có cho kèm muỗng nĩa nhựa không?",
+            "answer": "Theo chính sách bảo vệ môi trường, quán không mặc định giao kèm muỗng nĩa nhựa."
+        }
+    ],
+    "items": [
+      {"id": "item_201", "name": "Cơm sườn bì chả", "price": 65000, "description": "Sườn cốt lết nướng than hoa.", "ingredients": ["gạo tấm", "sườn heo", "trứng", "bì heo", "nước mắm"], "is_avaiable": true},
+      {"id": "item_202", "name": "Cơm gà xối mỡ", "price": 60000, "description": "Đùi gà chiên giòn rụm.", "ingredients": ["gạo", "đùi gà", "bột chiên"], "is_avaiable": true},
+      {"id": "item_203", "name": "Cơm xào hải sản", "price": 80000, "description": "Cơm chiên tôm, mực.", "ingredients": ["gạo", "tôm", "mực", "trứng"], "is_avaiable": false},
+      {"id": "item_204", "name": "Canh khổ qua nhồi thịt", "price": 35000, "description": "Khổ qua nhồi thịt băm.", "ingredients": ["khổ qua", "thịt băm", "mộc nhĩ"], "is_avaiable": true},
+      {"id": "item_205", "name": "Cơm sườn cây", "price": 70000, "description": "Sườn cây nướng đậm đà.", "ingredients": ["gạo tấm", "sườn cây", "nước mắm"], "is_avaiable": true},
+      {"id": "item_206", "name": "Chả trứng", "price": 20000, "description": "Chả trứng chưng.", "ingredients": ["trứng", "thịt băm", "nấm hương"], "is_avaiable": true},
+      {"id": "item_207", "name": "Bì heo trộn thính", "price": 25000, "description": "Bì trộn thính thơm giòn.", "ingredients": ["bì heo", "thính"], "is_avaiable": true},
+      {"id": "item_208", "name": "Cơm tấm bì", "price": 45000, "description": "Cơm tấm truyền thống với bì.", "ingredients": ["gạo tấm", "bì heo"], "is_avaiable": true},
+      {"id": "item_209", "name": "Nước mắm chua ngọt", "price": 5000, "description": "Nước mắm pha đặc biệt.", "ingredients": ["nước mắm", "tỏi", "ớt"], "is_avaiable": true},
+      {"id": "item_210", "name": "Trà đá", "price": 3000, "description": "Trà đá mát lạnh.", "ingredients": ["trà", "đá"], "is_avaiable": true}
+    ]
+  },
+  {
+    "id": "M003",
+    "name": "Mì Cay Sasin 7 Cấp Độ",
+    "description": "Lưu ý từ quán: Khách hàng có thể tuỳ chỉnh độ cay từ cấp độ 0 đến cấp độ 7.",
+    "faqs": [
+        {
+            "question": "Mì giao đến nơi có bị nở và nhũn không?",
+            "answer": "Quán luôn để riêng nước dùng, nên mì sẽ không bị nhũn."
+        }
+    ],
+    "items": [
+      {"id": "item_301", "name": "Mì cay kim chi bò", "price": 59000, "description": "Mì Koreno nấu kim chi và thịt bò Mỹ.", "ingredients": ["mì Hàn Quốc", "kim chi", "thịt bò", "xúc xích", "nấm"], "is_avaiable": true},
+      {"id": "item_302", "name": "Mì cay bạch tuộc", "price": 75000, "description": "Bạch tuộc tươi giòn, nước dùng siêu cay.", "ingredients": ["mì Hàn Quốc", "bạch tuộc", "kim chi", "nấm"], "is_avaiable": true},
+      {"id": "item_303", "name": "Takoyaki", "price": 45000, "description": "Bánh nướng bạch tuộc.", "ingredients": ["bột mì", "bạch tuộc", "cá bào"], "is_avaiable": true},
+      {"id": "item_304", "name": "Kimbap chiên xù", "price": 35000, "description": "Cơm cuộn Hàn Quốc giòn rụm.", "ingredients": ["gạo", "rong biển", "xúc xích"], "is_avaiable": true},
+      {"id": "item_305", "name": "Mì cay thập cẩm", "price": 85000, "description": "Đầy đủ bò, tôm, mực, viên.", "ingredients": ["mì", "bò", "tôm", "mực", "kim chi"], "is_avaiable": true},
+      {"id": "item_306", "name": "Tokbokki phô mai", "price": 55000, "description": "Bánh gạo Hàn Quốc với sốt phô mai.", "ingredients": ["bánh gạo", "phô mai", "sốt ớt"], "is_avaiable": true},
+      {"id": "item_307", "name": "Gà rán sốt cay", "price": 60000, "description": "Gà rán sốt cay kiểu Hàn.", "ingredients": ["gà", "bột chiên", "sốt ớt"], "is_avaiable": true},
+      {"id": "item_308", "name": "Kim chi", "price": 15000, "description": "Kim chi ăn kèm.", "ingredients": ["cải thảo", "ớt bột"], "is_avaiable": true},
+      {"id": "item_309", "name": "Trà sữa", "price": 30000, "description": "Trà sữa truyền thống.", "ingredients": ["trà", "sữa"], "is_avaiable": true},
+      {"id": "item_310", "name": "Coca-Cola", "price": 15000, "description": "Lon 330ml.", "ingredients": ["coca"], "is_avaiable": true}
+    ]
+  }
+]
