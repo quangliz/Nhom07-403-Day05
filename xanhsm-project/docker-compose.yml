@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   frontend:
-    build: ./apps/frontend
+    build: ./app
     ports:
       - "3000:3000"
     environment:
@@ -16,18 +16,11 @@ services:
       - "8000:8000"
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - TOOLS_URL=http://tools:8001
       - EVAL_URL=http://evaluation:8002
-    depends_on:
-      - tools
-      - evaluation
-
-  tools:
-    build: ./services/tools
-    ports:
-      - "8001:8001"
     volumes:
-      - ./data/mock:/app/data:ro
+      - ./data/mock:/app/data/mock:ro
+    depends_on:
+      - evaluation
 
   evaluation:
     build: ./services/evaluation

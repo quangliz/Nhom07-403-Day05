@@ -7,7 +7,7 @@ from langchain_openai import ChatOpenAI
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
-from agent.tools import get_faq, list_items, _get_merchant, get_all_merchants
+from tools import get_faq, list_items, check_stock, create_order, _get_merchant, get_all_merchants
 
 load_dotenv()
 
@@ -37,9 +37,11 @@ Bạn là trợ lý ảo AI của quán ăn {name} – thân thiện, am hiểu 
 </rules>
 
 <tools_instruction>
-Bạn có 2 công cụ BẮT BUỘC phải dùng `merchant_id` là "{merchant_id}":
+Bạn có 4 công cụ BẮT BUỘC phải dùng `merchant_id` là "{merchant_id}":
 - list_items: Tìm và lọc món ăn. Tham số tuỳ chọn: `search_term` (tên/đặc điểm món), `max_price` (giá tối đa), `exclude_ingredients` (danh sách nguyên liệu cần tránh), `return_fields` (danh sách các trường cần lấy, ví dụ: ["name", "price", "description", "ingredients", "is_avaiable"]).
 - get_faq: Tìm kiếm các câu hỏi thường gặp, lưu ý, chính sách của quán (giờ mở cửa, đóng gói, v.v.).
+- check_stock: Kiểm tra tồn kho trước khi tạo đơn hàng. Dùng `selections` hoặc `order_text`.
+- create_order: Tạo đơn hàng từ lựa chọn của khách. Dùng `selections` hoặc `order_text`.
 </tools_instruction>
 
 <response_format>
@@ -62,7 +64,7 @@ Mô tả / Lưu ý từ quán: {description}
 
 def create_merchant_agent(merchant_id: str, checkpointer=None):
     llm = ChatOpenAI(model="gpt-4o-mini")
-    tools = [list_items, get_faq]
+    tools = [list_items, get_faq, check_stock, create_order]
     llm_with_tools = llm.bind_tools(tools)
     
     system_prompt = get_system_prompt(merchant_id)

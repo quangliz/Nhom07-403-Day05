@@ -1,12 +1,13 @@
-from fastapi import FastAPI, HTTPException, BackgroundTasks
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 import time, os, httpx
 from langchain_core.messages import HumanMessage
-from agent.core import create_merchant_agent, get_all_merchants
+from agent.core import create_merchant_agent
+from tools import get_all_merchants
 from langgraph.checkpoint.memory import MemorySaver
 
-app = FastAPI(title="Merchant Chatbot API", description="A simple API for the LangGraph agent")
+router = APIRouter()
 
 # Global dict to hold one agent instance per merchant
 agents = {}
@@ -31,13 +32,8 @@ class ChatResponse(BaseModel):
     response: str
     merchant_name: str
 
-@app.get("/merchants")
-def list_merchants():
-    """Return a list of all available merchants."""
-    return get_all_merchants()
-
-@app.post("/chat", response_model=ChatResponse)
-def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks):
+@router.post("/chat", response_model=ChatResponse)
+def chat_endpoint(request: ChatRequest):
     """Chat with a specific merchant's AI assistant."""
     merchants = get_all_merchants()
     merchant = next((m for m in merchants if m["id"] == request.merchant_id), None)
@@ -93,7 +89,3 @@ def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks):
         response=ai_response,
         merchant_name=merchant["name"]
     )
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

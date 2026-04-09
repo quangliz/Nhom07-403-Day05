@@ -1,24 +1,15 @@
-import json, os, uuid
-from datetime import datetime, timezone
+"""
+EvalLogger — nhận EvalLog từ AI Agent và persist xuống file/DB
+"""
+import json
+import os
+import uuid
+from datetime import datetime
 from pathlib import Path
 from threading import Lock
 
-LOG_DIR = Path(os.environ.get("LOG_DIR", "/app/logs"))
+LOG_DIR = Path(os.environ.get("LOG_DIR", Path(__file__).parent / "logs"))
 LOG_DIR.mkdir(parents=True, exist_ok=True)
-_lock = Lock()
-
-DISCLAIMER_PHRASES = [
-    "xin xác nhận với quán","ai có thể có lỗi","liên hệ quán",
-    "kiểm tra kỹ","xác nhận trực tiếp","vui lòng xác nhận","hãy gọi quán",
-]
-ALLERGEN_KEYWORDS = [
-    "dị ứng","allergen","nguyên liệu","tôm","bò","gluten",
-    "đậu phộng","hải sản","sữa","không ăn được",
-]
-
-def _today_file(): return LOG_DIR / f"{datetime.now(timezone.utc).strftime('%Y-%m-%d')}.jsonl"
-def _has_disclaimer(text): return any(p in text.lower() for p in DISCLAIMER_PHRASES)
-def _is_allergen_query(q): return any(k in q.lower() for k in ALLERGEN_KEYWORDS)
 
 def write_log(log: dict) -> str:
     log_id = log.get("log_id") or str(uuid.uuid4())
