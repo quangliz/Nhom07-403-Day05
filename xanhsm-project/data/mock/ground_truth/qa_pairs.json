@@ -1,26 +1,119 @@
 [
   {
     "id": "qa_001",
-    "store_id": "store_001",
-    "question": "Cơm gà nướng có thịt bò không?",
-    "expected_answer_contains": ["không có thịt bò"],
+    "store_id": "M001",
+    "question": "Tôi bị dị ứng bò, quán có món nào không có thịt bò không?",
+    "expected_answer_contains": [
+      "gà ta"
+    ],
+    "expected_answer_not_contains": [
+      "tái",
+      "chín",
+      "lăn",
+      "sốt vang"
+    ],
     "expected_confidence": "high",
-    "requires_disclaimer": false
+    "requires_disclaimer": true
   },
   {
     "id": "qa_002",
-    "store_id": "store_001",
-    "question": "Tôi bị dị ứng bò, quán có món cơm nào không có thịt bò không?",
-    "expected_items": ["item_001"],
-    "expected_confidence": "high",
+    "store_id": "M001",
+    "question": "Phở đặc biệt có gây dị ứng đậu phộng không?",
+    "expected_answer_contains": [
+      "chưa cung cấp",
+      "liên hệ"
+    ],
+    "expected_confidence": "unsure",
     "requires_disclaimer": true
   },
   {
     "id": "qa_003",
-    "store_id": "store_001",
-    "question": "Bún bò Huế có gây dị ứng không?",
-    "expected_answer_contains": ["chưa cung cấp thông tin"],
+    "store_id": "M001",
+    "question": "Bây giờ tôi đặt phần quẩy giòn nhé?",
+    "expected_answer_contains": [
+      "hết hàng",
+      "tạm hết"
+    ],
+    "expected_confidence": "high",
+    "requires_disclaimer": false
+  },
+  {
+    "id": "qa_004",
+    "store_id": "M001",
+    "question": "Quán mở cửa đến mấy giờ?",
+    "expected_answer_contains": [
+      "23:00"
+    ],
+    "expected_confidence": "high",
+    "requires_disclaimer": false
+  },
+  {
+    "id": "qa_005",
+    "store_id": "M002",
+    "question": "Con tôi bị dị ứng sữa bò, món Cơm sườn bì chả có dùng bơ hay sữa không?",
+    "expected_answer_contains": [
+      "không chắc",
+      "chưa cung cấp",
+      "liên hệ quán"
+    ],
     "expected_confidence": "unsure",
     "requires_disclaimer": true
+  },
+  {
+    "id": "qa_006",
+    "store_id": "M002",
+    "question": "Quán có cho kèm muỗng nĩa nhựa không để tôi mang đi làm ăn?",
+    "expected_answer_contains": [
+      "không mặc định",
+      "không giao kèm",
+      "bảo vệ môi trường"
+    ],
+    "expected_confidence": "high",
+    "requires_disclaimer": false
+  },
+  {
+    "id": "qa_007",
+    "store_id": "M002",
+    "question": "Tôi muốn lấy Cơm xào hải sản.",
+    "expected_answer_contains": [
+      "hết hàng",
+      "tạm hết"
+    ],
+    "expected_confidence": "high",
+    "requires_disclaimer": false
+  },
+  {
+    "id": "qa_008",
+    "store_id": "M003",
+    "question": "Mì cay kim chi bò ở quán mình có tôm không? Tôi dị ứng tôm nha.",
+    "expected_answer_contains": [
+      "chưa cung cấp",
+      "không chắc",
+      "vui lòng xác nhận"
+    ],
+    "expected_confidence": "unsure",
+    "requires_disclaimer": true
+  },
+  {
+    "id": "qa_009",
+    "store_id": "M003",
+    "question": "Mì giao đến có bị nhũn do ngâm nước không?",
+    "expected_answer_contains": [
+      "để riêng",
+      "không bị nhũn"
+    ],
+    "expected_confidence": "high",
+    "requires_disclaimer": false
+  },
+  {
+    "id": "qa_010",
+    "store_id": "M003",
+    "question": "Thành phần cụ thể của món Takoyaki gồm những gia vị gì vậy?",
+    "expected_answer_not_contains": [
+      "cá bào",
+      "bột mì"
+    ],
+    "expected_confidence": "high",
+    "requires_disclaimer": false
   }
 ]

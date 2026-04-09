@@ -1,14 +1,10 @@
 from fastapi import APIRouter, Query
 from pydantic import BaseModel
 from typing import Optional
-<<<<<<< HEAD
 from logger import write_log, update_outcome, write_correction, load_logs, load_corrections
 from metrics.accuracy  import run_accuracy_eval, run_batch_accuracy, check_disclaimer_compliance
 from metrics.latency   import compute_p95_latency
 from metrics.conversion import compute_conversion_rate, compute_satisfaction_rate, compute_unsure_rate
-=======
-from logger import write_log, update_outcome, write_correction
->>>>>>> e370928 (add tools, refactor code)
 
 router = APIRouter()
 
@@ -22,6 +18,8 @@ class EvalLogRequest(BaseModel):
     confidence: str = "high"
     latency_ms: float
     token_usage: Optional[dict] = None
+    model_name: Optional[str] = "gpt-4o-mini"
+    cost: Optional[float] = 0.0
 
 class OutcomeRequest(BaseModel):
     log_id: str

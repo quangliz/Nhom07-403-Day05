@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, BackgroundTasks
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 import time, os, httpx
@@ -33,7 +33,7 @@ class ChatResponse(BaseModel):
     merchant_name: str
 
 @router.post("/chat", response_model=ChatResponse)
-def chat_endpoint(request: ChatRequest):
+def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks):
     """Chat with a specific merchant's AI assistant."""
     merchants = get_all_merchants()
     merchant = next((m for m in merchants if m["id"] == request.merchant_id), None)
@@ -63,15 +63,26 @@ def chat_endpoint(request: ChatRequest):
     # Extract AI tracing info
     tools_called = []
     token_usage = {}
+    model_name = "unknown"
+    cost = 0.0
     
     for msg in messages:
         if getattr(msg, "type", "") == "ai":
             if hasattr(msg, "tool_calls") and msg.tool_calls:
                 for tc in msg.tool_calls:
                     tools_called.append({"name": tc["name"], "args": tc["args"]})
-            if hasattr(msg, "response_metadata") and "token_usage" in msg.response_metadata:
-                token_usage = msg.response_metadata["token_usage"]
-                
+            if hasattr(msg, "response_metadata"):
+                if "token_usage" in msg.response_metadata:
+                    token_usage = msg.response_metadata["token_usage"]
+                if "model_name" in msg.response_metadata:
+                    model_name = msg.response_metadata["model_name"]
+                    
+    # Calculate accurate cost for gpt-4o-mini ($0.150 / 1M Input, $0.600 / 1M Output)
+    if "gpt-4o-mini" in model_name:
+        prompt_tokens = token_usage.get("prompt_tokens", 0)
+        completion_tokens = token_usage.get("completion_tokens", 0)
+        cost = (prompt_tokens * 0.15 / 1000000) + (completion_tokens * 0.60 / 1000000)
+
     # Push log background task
     log_payload = {
         "merchant_id": request.merchant_id,
@@ -80,6 +91,8 @@ def chat_endpoint(request: ChatRequest):
         "response_text": ai_response,
         "tools_called": tools_called,
         "token_usage": token_usage,
+        "model_name": model_name,
+        "cost": cost,
         "latency_ms": latency_ms,
         "confidence": "high" # default to high unless unsure
     }

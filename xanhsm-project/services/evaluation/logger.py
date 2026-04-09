@@ -28,6 +28,8 @@ def write_log(log: dict) -> str:
         "has_disclaimer": _has_disclaimer(resp),
         "is_allergen_query": _is_allergen_query(log.get("query","")),
         "token_usage": log.get("token_usage"),
+        "model_name": log.get("model_name"),
+        "cost": log.get("cost", 0.0),
         "outcome": None,
     }
     with _lock:
